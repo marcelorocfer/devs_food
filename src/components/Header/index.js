@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Container, Logo, SearchInput } from './styled';
 
 export default ({ search, onSearch }) => {
-    const [inputActive, setinputActive] = useState(search == '' ? false : true);
+    const [inputActive, setinputActive] = useState(search === '' ? false : true);
 
     const handleInputFocus = () => {
         setinputActive(true);
     }
 
     const handleInputBlur = () => {
-        if (search == '') {
+        if (search === '') {
             setinputActive(false);
         }
     }
